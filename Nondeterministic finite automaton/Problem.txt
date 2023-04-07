@@ -1,0 +1,25 @@
+You can find the problem with the link down below:
+https://adamgyenge.gitlab.io/docs/progalg/2023en/02/02en.html
+
+Or read it here
+
+2. Nondeterministic finite automaton
+
+The program automaton-p.py simulates the running of a simple non-deterministic finite automaton.
+Download the program and run it with the command
+python3 automaton.py word
+	
+where word is the word you want to recognize.
+
+The program uses the built-in set functions to keep records of the currently available states in the computing tree of the non-deterministic finite automaton.
+Draw the automaton and explain it with your own words: (1) how does the program simulate the operation of the automaton, (2) what language does the automaton recognize? (You do not need to hand in this; it is only for practicing.)
+Change the description of the automaton in the file automaton-p.py between the lines
+# START
+	
+and
+
+# STOP
+	
+so that the program accepts the words that contain even number of letters a or contain the string algp (or both)!
+
+So e.g. 'aaalgprbbb' and 'asdaefaa' are accepted but 'aaalgbb' is not.

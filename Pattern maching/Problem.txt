@@ -1,5 +1,7 @@
-# You can find the problem with link down below
+You can find the problem with link down below
 https://adamgyenge.gitlab.io/docs/progalg/2023en/01/01en.html
+
+or read it here.
 
 1. Pattern maching
 Write a program for comparing the simple matching and the quick search algorithms!

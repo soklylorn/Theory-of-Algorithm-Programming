@@ -1,2 +1,38 @@
 # You can find the problem with link down below
 https://adamgyenge.gitlab.io/docs/progalg/2023en/01/01en.html
+
+1. Pattern maching
+Write a program for comparing the simple matching and the quick search algorithms!
+The input for the program is given in a terminal command.
+python3 1AdrianSmith.py text.text pattern
+The program reads the file text.text and search for the first occurrence of the given pattern in it. The command arguments can be read out from the inbuilt array sys.argv:
+
+import sys
+
+print(f'Filename: {sys.argv[1]}, pattern: {sys.argv[2]}')
+print(f"The name of this program has {len(sys.argv[0]):2} characters")
+The sys.argv[0] contains the name of the program, the len() function gives the length of it.
+
+For reading a file use the file functions, e.g.
+with open(filename) as f:
+    text = f.read().strip()
+The strip() method cut down the unnecessary starting and ending white spaces.
+
+In your program you do not need to check if the specified text file exists or whether it actually contains text. The pattern is always at most as long as the text. The text contains lowercase letters of the English alphabet a-z and spaces. There are only lowercase letters in the pattern, but no spaces. According to the algorithms, the program allows the comparison of a single character of the text and the pattern, but does not use the Python 3 string functions except the len() function.
+Your program have to run the simple matching and the quick search algorithms with the given text and pattern. The output of the program specifies whether the pattern is in the text, at which character position and how many comparisons have been made to the first occurrence. Give 5 character space to the number of comparisons, and 4 character spaces to the position. The position number of the first character must be 1 (not 0). Use f-strings in printing the output! The output has to be look like this:
+Simple search:  2610 comparisons, the pattern starts at 2321
+Quick search:    270 comparisons, the pattern starts at 2321
+Specify the number of comparisons even if the pattern does not appear in the text:
+
+Simple search: 53610 comparisons, no pattern
+Quick search:   5470 comparisons, no pattern
+If you use the end="..." option in the print() function, the output of the next print() call will be continued in the same line.
+In Python 3 you may use special or accented lettes (e.g. you may write your name if it contains such letters of any language), but avoid such letters in the variable names, although it is possible.
+Try your program with the next downloadable text files and with the given patterns (of course in the test phase of your program, you may use your own very simple text files and patterns):
+File	Pattern
+1.text	overscrupulous
+1.text	zombies
+2.text	aaaaaaaaa
+2.text	bbbbbbbbb
+2.text	aaaaaaaab
+2.text	aaaaaaaba
